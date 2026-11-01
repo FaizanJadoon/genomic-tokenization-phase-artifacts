@@ -1,0 +1,133 @@
+{
+  "research_step": 20,
+  "audit_time_utc": "2026-10-25T16:52:48.890426+00:00",
+  "paper_title": "Tokenization-Phase Artifacts in Genomic Foundation Models: Training-Free Correction of Single-Nucleotide Variant Effect Scores",
+  "checks": {
+    "artifact_original_cohort": true,
+    "artifact_heldout_cohort": true,
+    "artifact_original_stability_summary": true,
+    "artifact_main_experiment_A": true,
+    "artifact_main_experiment_B": true,
+    "artifact_main_experiment_C": true,
+    "artifact_heldout_scores": true,
+    "artifact_sequence_metadata": true,
+    "artifact_model_config": true,
+    "artifact_tokenizer_vocabulary": true,
+    "original_cohort_size_1000": true,
+    "heldout_cohort_size_1000": true,
+    "heldout_unique_loci": true,
+    "original_heldout_locus_disjoint": true,
+    "scored_variants_1000": true,
+    "scored_loci_match_heldout": true,
+    "heldout_class_balance": true,
+    "heldout_reference_integrity": true,
+    "all_stability_values_finite": true,
+    "heldout_reduction_recomputed": true,
+    "heldout_improvement_recomputed": true,
+    "heldout_positive_improvement_count": true,
+    "heldout_ci_excludes_zero": true,
+    "all_heldout_scores_reproduce_stability": true,
+    "all_six_baselines_improve": true,
+    "all_six_holm_adjusted_p_below_0_05": true,
+    "benchmark_latency_ratio_consistent": true,
+    "benchmark_phase0_numerical_agreement": true,
+    "clinical_auroc_improvement_not_established": true,
+    "all_sequence_sources_identifiable": true,
+    "model_weight_files_present": true
+  },
+  "passed_checks": 31,
+  "failed_checks": [],
+  "original_stability_reduction_percent": 52.97396237872547,
+  "heldout_stability_reduction_percent": 53.460800201105,
+  "heldout_mean_paired_improvement": 0.2292405851682027,
+  "heldout_improvement_ci95": [
+    0.21124735639989373,
+    0.24824374694054324
+  ],
+  "heldout_variants_improved": 810,
+  "benchmark_latency_ratio": 1.5022306554408988,
+  "reference_source_counts": {
+    "Other_or_Ensembl": 17,
+    "UCSC": 983
+  },
+  "warnings": [
+    "Held-out reference sequences use mixed Ensembl/UCSC provenance. Manuscript and metadata must disclose both providers."
+  ],
+  "software_environment": {
+    "python": "3.12.4",
+    "operating_system": "Windows-10-10.0.19045-SP0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit_learn": "1.9.1",
+    "torch": "2.9.1+cu128",
+    "transformers": "4.46.3",
+    "matplotlib": "3.11.2",
+    "tokenizers": "0.20.3"
+  },
+  "artifact_manifest": {
+    "original_cohort": {
+      "path": "D:\\research\\Faizan\\Paper-2\\data\\processed\\clinvar_high_confidence_snvs.csv",
+      "size_bytes": 92167,
+      "sha256": "4cd97aab131212b5c43d9e389891f0a900d5d7af1adbc4a4d0863584fec669be"
+    },
+    "heldout_cohort": {
+      "path": "D:\\research\\Faizan\\Paper-2\\data\\processed\\clinvar_heldout_grch38_sequences.csv",
+      "size_bytes": 390805,
+      "sha256": "a422834a24d59f4ad713b473001d8686c43dbe21c42577028d27109b5f348b2c"
+    },
+    "original_stability_summary": {
+      "path": "D:\\research\\Faizan\\Paper-2\\results\\experiment_11\\stability_analysis.json",
+      "size_bytes": 2074,
+      "sha256": "548d88b0ad7a208248d158f80d4caa91592877e211e908836a38d886fcf2f4e2"
+    },
+    "main_experiment_A": {
+      "path": "D:\\research\\Faizan\\Paper-2\\results\\main_experiment_A\\fixed_core_analysis.json",
+      "size_bytes": 2636,
+      "sha256": "93eb838041569a1981d7e30d3bd8268dcf0b112fe547450990d87aadec1a0f72"
+    },
+    "main_experiment_B": {
+      "path": "D:\\research\\Faizan\\Paper-2\\results\\main_experiment_B\\heldout_validation.json",
+      "size_bytes": 6365,
+      "sha256": "c03522c1f072df566156b96631d79cd5888ecd0db250306fc7934ab6dab4c032"
+    },
+    "main_experiment_C": {
+      "path": "D:\\research\\Faizan\\Paper-2\\results\\main_experiment_C\\compute_benchmark.json",
+      "size_bytes": 4137,
+      "sha256": "b706756c94352a560550d96f728e02bbb7a19999366e74180124bab624288c0c"
+    },
+    "heldout_scores": {
+      "path": "D:\\research\\Faizan\\Paper-2\\results\\main_experiment_B\\heldout_anchor_scores.csv",
+      "size_bytes": 994997,
+      "sha256": "8caa81ba84069da153e5c17fe8e1963a1f74001a964c1613ccf51dba2810eb88"
+    },
+    "sequence_metadata": {
+      "path": "D:\\research\\Faizan\\Paper-2\\data\\processed\\clinvar_heldout_sequences_metadata.json",
+      "size_bytes": 1479,
+      "sha256": "724290afc4d13109db71eb97dfac6440ecc91abba794a4a43285cc00093288ae"
+    },
+    "model_config": {
+      "path": "D:\\research\\Faizan\\Paper-2\\models\\nt-v2-50m\\config.json",
+      "size_bytes": 1064,
+      "sha256": "e20f497248c7cb264c7cd4582dbcfd52dc4cbf74a97fc711559b8c8f71c635db"
+    },
+    "tokenizer_vocabulary": {
+      "path": "D:\\research\\Faizan\\Paper-2\\models\\nt-v2-50m\\vocab.txt",
+      "size_bytes": 28718,
+      "sha256": "c00e0ad166d6ab3f7540ebc92270392e581bb3106763412f29034b49323e1052"
+    },
+    "model_weight_model.safetensors": {
+      "path": "D:\\research\\Faizan\\Paper-2\\models\\nt-v2-50m\\model.safetensors",
+      "size_bytes": 223642688,
+      "sha256": "17e75af297556ea56828716d8aa539e8f12b8b625547204b74171ab91aa33569"
+    }
+  },
+  "limitations_for_manuscript": [
+    "Same ClinVar release for both cohorts",
+    "Held-out positions are disjoint, but genes are not guaranteed disjoint",
+    "Anchor shifts also alter flanking context",
+    "No demonstrated improvement in clinical AUROC",
+    "Model evaluated on one local GPU",
+    "Single pretrained model architecture",
+    "Clinical annotations are proxy labels rather than direct functional measurements"
+  ]
+}

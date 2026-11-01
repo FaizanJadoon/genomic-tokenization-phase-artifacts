@@ -1,0 +1,33 @@
+{
+  "experiment": "04_variant_level_statistical_analysis",
+  "n_independent_variants": 60,
+  "bootstrap_iterations": 10000,
+  "random_seed": 20261025,
+  "mean_same_phase_difference": 0.4032207555241056,
+  "mean_different_phase_difference": 1.3514203415976633,
+  "ratio_of_condition_means": 3.351564429864454,
+  "mean_paired_difference": 0.9481995860735574,
+  "bootstrap_95_ci": [
+    0.805387704859177,
+    1.1054079802566104
+  ],
+  "wilcoxon_statistic": 1829.0,
+  "wilcoxon_one_sided_p": 8.570746990858083e-12,
+  "variants_with_larger_different_phase_effect": 59,
+  "python_version": "3.12.4",
+  "numpy_version": "2.5.4",
+  "pandas_version": "3.1.0",
+  "scipy_version": "1.18.1",
+  "source_sha256": {
+    "same_phase_controls.csv": "262a8f5ac730256ee2d2856e7e843fe118339dfb9998e60edd5e9cba36512afa",
+    "different_phase_pairs.csv": "7d0f4185ec942d9cfa24b171307d09724939dd6e35a7a2b213a5ced7f20829a5"
+  },
+  "script_sha256": "85d85204d801eafa7f0e2d32880f044ae1f33afe6d1a502981b7a1d838793258",
+  "interpretation_limitations": [
+    "Synthetic variants only",
+    "Same-phase and different-phase shift distances differ",
+    "Window context and token position are not fully controlled",
+    "Statistical significance cannot establish causality",
+    "No biological ground-truth labels"
+  ]
+}

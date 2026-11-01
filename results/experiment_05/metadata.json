@@ -1,0 +1,33 @@
+{
+  "experiment": "05_distance_matched_control",
+  "independent_variants": 60,
+  "total_window_pairs": 2160,
+  "shift_distances": [
+    5,
+    6,
+    7
+  ],
+  "mean_absolute_differences": {
+    "5": 1.2662440196061744,
+    "6": 0.4032207555241056,
+    "7": 1.269575224500714
+  },
+  "mean_paired_contrast": 0.8646888665293387,
+  "bootstrap_95_ci": [
+    0.7478960197949789,
+    0.9913395245724069
+  ],
+  "bootstrap_iterations": 10000,
+  "seed": 20261025,
+  "one_sided_wilcoxon_p": 8.570746990858083e-12,
+  "variants_with_positive_contrast": 59,
+  "source_sha256": "6360036ac6a109da341dceafc15fe43228c015c187e1667219f1e00858759e3d",
+  "script_sha256": "489bb5b53a9ecc667372339765d0eb861b6ace8865e994aef2bbca4772ee53c0",
+  "limitations": [
+    "Shift distances are closely matched, not identical",
+    "Phase and shift distance cannot be fully separated",
+    "Window context and token position still change",
+    "Synthetic sequences without biological labels",
+    "Exploratory analysis; not independent confirmation"
+  ]
+}

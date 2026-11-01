@@ -1,0 +1,28 @@
+{
+  "experiment": "02_multi_variant_phase_evaluation",
+  "experiment_type": "exploratory_synthetic",
+  "model": "InstaDeepAI/nucleotide-transformer-v2-50m-multi-species",
+  "model_revision": "81b29e5786726d891dbf929404ef20adca5b36f1",
+  "random_seed": 20261025,
+  "number_of_variants": 60,
+  "number_of_scores": 360,
+  "window_length": 144,
+  "scoring_method": "masked_token_log_probability_ALT_minus_REF",
+  "precision": "float32",
+  "torch_version": "2.9.1+cu128",
+  "transformers_version": "4.46.3",
+  "python_version": "3.12.4",
+  "gpu": "NVIDIA GeForce RTX 3080",
+  "script_sha256": "4cbd2ef812cacdca204b6922984cc2b09c856b61d2bb7c3da8c74097f79b2e9a",
+  "mean_score_range": 3.109197489420573,
+  "median_score_range": 2.646988868713379,
+  "sign_flip_count": 44,
+  "sign_flip_fraction": 0.7333333333333333,
+  "runtime_seconds": 2.04,
+  "limitations": [
+    "Synthetic random DNA sequences",
+    "Shifted windows have different flanking bases",
+    "No biological ground-truth labels",
+    "No independent tokenizer or model control"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "experiment": "09_clinvar_phase_scores",
+  "research_step": 12,
+  "model": "InstaDeepAI/nucleotide-transformer-v2-50m-multi-species",
+  "expected_model_revision": "81b29e5786726d891dbf929404ef20adca5b36f1",
+  "model_source": "D:\\research\\Faizan\\Paper-2\\models\\nt-v2-50m",
+  "precision": "float32",
+  "device": "NVIDIA GeForce RTX 3080",
+  "seed": 20261025,
+  "reference_assembly": "GRCh38",
+  "variants": 1000,
+  "phases_per_variant": 6,
+  "total_scores": 6000,
+  "window_length": 144,
+  "variant_index_zero_based": 120,
+  "phase_window_starts": [
+    48,
+    49,
+    50,
+    51,
+    52,
+    53
+  ],
+  "scoring_method": "Masked-token log probability of alternate 6-mer minus reference 6-mer",
+  "raw_score": "phase_0_score",
+  "correction": "Arithmetic mean of six phase scores",
+  "phase_sign_disagreements": 619,
+  "mean_phase_range": 2.868879892349243,
+  "input_sha256": "01c1224263d0aa3573597347c095afd36344bb76dc7b674519f17beafeeafaeb",
+  "output_sha256": "d47b4a4b0177c38ae3cfab2f2e6e8c0c05dd519e922d6d6c2fbc68b4d7963db0",
+  "script_sha256": "d0ed27ef2cfaa86d7c5a922e22b8cc407af141fe1c8d49938c10ae08dc5cdb4a",
+  "model_config_sha256": "e20f497248c7cb264c7cd4582dbcfd52dc4cbf74a97fc711559b8c8f71c635db",
+  "tokenizer_vocab_sha256": "c00e0ad166d6ab3f7540ebc92270392e581bb3106763412f29034b49323e1052",
+  "limitations": [
+    "ClinVar labels are clinical classifications, not direct molecular-effect measurements",
+    "The model is not a validated clinical pathogenicity classifier",
+    "Phase averaging is training-free and does not guarantee better clinical discrimination",
+    "Shifting windows also changes flanking sequence context",
+    "The expected model revision is recorded but not independently verified by this script"
+  ]
+}

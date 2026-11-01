@@ -1,0 +1,79 @@
+{
+  "experiment": "12_clinvar_distance_controls",
+  "research_step": 15,
+  "variants": 1000,
+  "seed": 20261025,
+  "window_start_offsets": [
+    -6,
+    -5,
+    -4,
+    -3,
+    -2,
+    -1,
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "distance_nt": [
+    5,
+    6,
+    7
+  ],
+  "pairs_per_variant": {
+    "5": 13,
+    "6": 12,
+    "7": 11
+  },
+  "mean_absolute_change": {
+    "5": 1.1913041174320074,
+    "6": 0.4037679416537285,
+    "7": 1.2036705956784162
+  },
+  "different_phase_mean": 1.1974873565552118,
+  "same_phase_mean": 0.4037679416537285,
+  "mean_paired_contrast": 0.7937194149014833,
+  "positive_contrasts": 999,
+  "contrast_ci95": [
+    0.7673801051549127,
+    0.8205462645195425
+  ],
+  "wilcoxon_one_sided_p": 1.6779759014657313e-165,
+  "bootstrap_replicates": 2000,
+  "bootstrap_method": "Paired, class-stratified variant-level bootstrap",
+  "subgroups": {
+    "benign": {
+      "variants": 500,
+      "same_phase_mean": 0.399014611184597,
+      "different_phase_mean": 1.1721691744035774,
+      "mean_paired_contrast": 0.7731545632189805,
+      "positive_contrasts": 499
+    },
+    "pathogenic": {
+      "variants": 500,
+      "same_phase_mean": 0.40852127212285994,
+      "different_phase_mean": 1.2228055387068462,
+      "mean_paired_contrast": 0.8142842665839862,
+      "positive_contrasts": 500
+    }
+  },
+  "input_sha256": "921b7c18314236ed09e42045b767b3c438dab29edcf7219f937211e26f113d9c",
+  "output_sha256": "7182c0068c299544e453de5bd4cb01edc6b0461c73b77c76bf159b2eb1928027",
+  "script_sha256": "4bbb6f00e02a58a5ac9d0efd30841fc5d53ad7515e201bb2ceb567f75d32dfa3",
+  "limitations": [
+    "The 5-, 6-, and 7-nt shifts differ slightly in displacement distance",
+    "Window shifting changes flanking sequence context and token positions",
+    "These comparisons support phase association but do not establish an isolated causal tokenization-phase effect",
+    "Overlapping window pairs are aggregated within each variant before inference",
+    "Shared genes or loci can create dependence between variants",
+    "The data were already used for prior stability analyses; this is a follow-up control, not independent replication"
+  ]
+}

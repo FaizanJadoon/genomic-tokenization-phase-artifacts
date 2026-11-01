@@ -1,0 +1,104 @@
+{
+  "experiment": "18_compute_benchmark",
+  "research_step": 19,
+  "model": "Nucleotide Transformer v2 50M",
+  "gpu": "NVIDIA GeForce RTX 3080",
+  "torch_version": "2.9.1+cu128",
+  "cuda_version": "12.8",
+  "dtype": "float32",
+  "variants": 120,
+  "batch_size_variants": 4,
+  "repeats": 3,
+  "window_length_nt": 144,
+  "single_phase_scores_per_variant": 1,
+  "six_phase_scores_per_variant": 6,
+  "model_load_seconds": 0.7575203000014881,
+  "single_phase": {
+    "repeats": [
+      {
+        "mode": "single_phase",
+        "seconds": 0.3118238000024576,
+        "milliseconds_per_variant": 2.5985316666871463,
+        "variants_per_second": 384.8327164220763,
+        "peak_allocated_mib": 226.7529296875,
+        "peak_reserved_mib": 274.0,
+        "peak_incremental_allocated_mib": 4.26220703125
+      },
+      {
+        "mode": "single_phase",
+        "seconds": 0.30178259999956936,
+        "milliseconds_per_variant": 2.514854999996411,
+        "variants_per_second": 397.6372395233232,
+        "peak_allocated_mib": 226.7529296875,
+        "peak_reserved_mib": 274.0,
+        "peak_incremental_allocated_mib": 4.26220703125
+      },
+      {
+        "mode": "single_phase",
+        "seconds": 0.3041931000043405,
+        "milliseconds_per_variant": 2.534942500036171,
+        "variants_per_second": 394.486265461931,
+        "peak_allocated_mib": 226.7529296875,
+        "peak_reserved_mib": 274.0,
+        "peak_incremental_allocated_mib": 4.26220703125
+      }
+    ],
+    "median_milliseconds_per_variant": 2.534942500036171,
+    "median_variants_per_second": 394.486265461931,
+    "maximum_peak_allocated_mib": 226.7529296875,
+    "maximum_peak_reserved_mib": 274.0,
+    "maximum_incremental_allocated_mib": 4.26220703125
+  },
+  "six_phase": {
+    "repeats": [
+      {
+        "mode": "six_phase",
+        "seconds": 0.4619529000046896,
+        "milliseconds_per_variant": 3.8496075000390797,
+        "variants_per_second": 259.7667424509767,
+        "peak_allocated_mib": 247.07421875,
+        "peak_reserved_mib": 274.0,
+        "peak_incremental_allocated_mib": 24.58349609375
+      },
+      {
+        "mode": "six_phase",
+        "seconds": 0.45560550001391675,
+        "milliseconds_per_variant": 3.796712500115973,
+        "variants_per_second": 263.3857580655513,
+        "peak_allocated_mib": 247.07421875,
+        "peak_reserved_mib": 274.0,
+        "peak_incremental_allocated_mib": 24.58349609375
+      },
+      {
+        "mode": "six_phase",
+        "seconds": 0.4569682000001194,
+        "milliseconds_per_variant": 3.808068333334328,
+        "variants_per_second": 262.6003297384121,
+        "peak_allocated_mib": 247.07421875,
+        "peak_reserved_mib": 274.0,
+        "peak_incremental_allocated_mib": 24.58349609375
+      }
+    ],
+    "median_milliseconds_per_variant": 3.808068333334328,
+    "median_variants_per_second": 262.6003297384121,
+    "maximum_peak_allocated_mib": 247.07421875,
+    "maximum_peak_reserved_mib": 274.0,
+    "maximum_incremental_allocated_mib": 24.58349609375
+  },
+  "median_latency_ratio": 1.5022306554408988,
+  "maximum_phase0_score_difference": 3.0517578125e-05,
+  "timing_scope": "Warm-model end-to-end sequence tokenization, GPU transfer, forward inference, score extraction and CPU result transfer",
+  "input_sha256": "a422834a24d59f4ad713b473001d8686c43dbe21c42577028d27109b5f348b2c",
+  "model_config_sha256": "e20f497248c7cb264c7cd4582dbcfd52dc4cbf74a97fc711559b8c8f71c635db",
+  "tokenizer_vocab_sha256": "c00e0ad166d6ab3f7540ebc92270392e581bb3106763412f29034b49323e1052",
+  "script_sha256": "0742557ebe03ea4aa304a768a33e64c80880ac4b7ad0ce808ef6f6783d6c7994",
+  "limitations": [
+    "One GPU and one batch-size configuration",
+    "120 sampled held-out variants",
+    "Three repeated timing measurements",
+    "Model loading excluded from main latency",
+    "GPU timings may vary with thermal state and competing workloads",
+    "Peak reserved memory includes allocator caching",
+    "Batched six-phase inference may not cost exactly six times the wall-clock latency"
+  ]
+}

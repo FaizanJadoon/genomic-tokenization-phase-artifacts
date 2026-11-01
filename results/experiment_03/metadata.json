@@ -1,0 +1,29 @@
+{
+  "experiment": "03_same_phase_window_controls",
+  "model": "InstaDeepAI/nucleotide-transformer-v2-50m-multi-species",
+  "model_revision": "81b29e5786726d891dbf929404ef20adca5b36f1",
+  "seed": 20261025,
+  "variants": 60,
+  "scores": 1080,
+  "window_length": 144,
+  "same_phase_offsets": [
+    -6,
+    0,
+    6
+  ],
+  "max_baseline_reproduction_difference": 2.47955322265625e-05,
+  "mean_abs_same_phase_difference": 0.4032207555241055,
+  "mean_abs_different_phase_difference": 1.351420341597663,
+  "torch_version": "2.9.1+cu128",
+  "transformers_version": "4.46.3",
+  "python_version": "3.12.4",
+  "gpu": "NVIDIA GeForce RTX 3080",
+  "script_sha256": "3a74b3a4b20b089bae2b549913938233d0bbdcddfae883b941ef7315b5dbe380",
+  "runtime_seconds": 2.44,
+  "limitations": [
+    "Same-phase and different-phase shifts have different distances",
+    "Shifting windows changes flanking context and token position",
+    "Synthetic DNA only; no biological ground truth",
+    "This control does not establish tokenization causality"
+  ]
+}

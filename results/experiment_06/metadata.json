@@ -1,0 +1,33 @@
+{
+  "experiment": "06_training_free_phase_averaging",
+  "independent_variants": 60,
+  "phases_per_anchor": 6,
+  "anchor_offsets": [
+    -6,
+    0,
+    6
+  ],
+  "method": "arithmetic_mean_of_six_phase_scores",
+  "raw_mean_absolute_anchor_change": 0.4032207555241056,
+  "corrected_mean_absolute_anchor_change": 0.19032270908355714,
+  "relative_reduction_percent": 52.799376898102366,
+  "mean_paired_improvement": 0.21289804644054836,
+  "bootstrap_95_ci": [
+    0.18108915295865802,
+    0.24671493331591288
+  ],
+  "bootstrap_iterations": 10000,
+  "one_sided_wilcoxon_p": 8.147778971559672e-12,
+  "variants_with_improvement": 60,
+  "seed": 20261025,
+  "source_sha256": "6360036ac6a109da341dceafc15fe43228c015c187e1667219f1e00858759e3d",
+  "script_sha256": "dfd9371e978e50e457b2d3e7fcf0630b6cb9b16a544767d2051f2b82f727cf13",
+  "limitations": [
+    "Synthetic sequences only",
+    "Overlapping sequence windows",
+    "Averaging can reduce variability by construction",
+    "No independent biological ground-truth labels",
+    "No evidence yet of improved variant classification",
+    "Phase averaging is evaluated for stability only"
+  ]
+}

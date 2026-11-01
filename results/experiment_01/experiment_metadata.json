@@ -1,0 +1,48 @@
+{
+  "model": "InstaDeepAI/nucleotide-transformer-v2-50m-multi-species",
+  "model_revision": "81b29e5786726d891dbf929404ef20adca5b36f1",
+  "random_seed": 42,
+  "sequence": "GACAGGTACAAGAAGGAGTATGCATCAATGTGGTCGTGTGGAACAAACGCCACTGGAGACTGGGTTAACCATTCGCTCCAGCGTCATGAAAGTCACTGTTAGGGCGACCTTCGATTCGGATGTGACATTTCATTACATTACGCTCAGGACTGCGAACGAAAGATTAAGAATGCTTAACCCGGTACCTAACCCATCTGATTTTTACACACTCTCCTTGGACTGGGAGGTATAAGGAATAGG",
+  "variant_position_zero_based": 120,
+  "reference_base": "T",
+  "alternate_base": "A",
+  "window_length": 144,
+  "scoring_method": "masked_token_log_probability_ALT_minus_REF",
+  "precision": "float32",
+  "torch_version": "2.9.1+cu128",
+  "phase_scores": [
+    {
+      "phase": 0,
+      "position_in_6mer": 0,
+      "score": 1.334402084350586
+    },
+    {
+      "phase": 1,
+      "position_in_6mer": 5,
+      "score": -0.6798214912414551
+    },
+    {
+      "phase": 2,
+      "position_in_6mer": 4,
+      "score": -1.2571611404418945
+    },
+    {
+      "phase": 3,
+      "position_in_6mer": 3,
+      "score": -1.1445531845092773
+    },
+    {
+      "phase": 4,
+      "position_in_6mer": 2,
+      "score": -0.3779029846191406
+    },
+    {
+      "phase": 5,
+      "position_in_6mer": 1,
+      "score": -0.3632011413574219
+    }
+  ],
+  "mean_score": -0.4147063096364339,
+  "score_range": 2.5915632247924805,
+  "score_std": 0.854017972946167
+}

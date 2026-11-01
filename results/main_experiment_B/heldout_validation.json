@@ -1,0 +1,162 @@
+{
+  "experiment": "17_heldout_validation",
+  "research_step": 18,
+  "validation_type": "Held-out position-disjoint variants from the same ClinVar release",
+  "seed": 20261026,
+  "variants": 1000,
+  "benign": 500,
+  "pathogenic": 500,
+  "overlap_with_original_loci": 0,
+  "model": "Nucleotide Transformer v2 50M",
+  "window_length_nt": 144,
+  "variant_index_zero_based": 120,
+  "anchor_shifts_nt": [
+    -6,
+    0,
+    6
+  ],
+  "phases_per_anchor": 6,
+  "score": "log P(ALT token) - log P(REF token)",
+  "primary_endpoint": "Mean absolute anchor-shift score change",
+  "primary_comparison": "Phase 0 versus six-phase mean",
+  "raw_mean_absolute_anchor_change": 0.42880126056075096,
+  "average_mean_absolute_anchor_change": 0.19956067539254824,
+  "mean_paired_improvement": 0.2292405851682027,
+  "relative_reduction_percent": 53.460800201105,
+  "paired_improvement_ci95": [
+    0.21124735639989373,
+    0.24824374694054324
+  ],
+  "wilcoxon_one_sided_p": 1.1960647467024098e-106,
+  "variants_with_positive_improvement": 810,
+  "mean_center_phase_range": 2.9371438509225847,
+  "center_sign_disagreements": 607,
+  "all_six_phase_baselines": {
+    "0": {
+      "baseline_mean_instability": 0.42880126056075096,
+      "averaged_mean_instability": 0.19956067539254824,
+      "mean_paired_improvement": 0.2292405851682027,
+      "relative_reduction_percent": 53.460800201105,
+      "paired_improvement_ci95": [
+        0.21124735639989373,
+        0.24824374694054324
+      ],
+      "wilcoxon_one_sided_p": 1.1960647467024098e-106,
+      "variants_improved": 810,
+      "holm_adjusted_p": 7.176388480214458e-106
+    },
+    "1": {
+      "baseline_mean_instability": 0.42889122647047045,
+      "averaged_mean_instability": 0.19956067539254824,
+      "mean_paired_improvement": 0.2293305510779222,
+      "relative_reduction_percent": 53.470562446609485,
+      "paired_improvement_ci95": [
+        0.20967668221294883,
+        0.24930186165620882
+      ],
+      "wilcoxon_one_sided_p": 1.296962411374747e-104,
+      "variants_improved": 804,
+      "holm_adjusted_p": 6.484812056873735e-104
+    },
+    "2": {
+      "baseline_mean_instability": 0.37851920133829114,
+      "averaged_mean_instability": 0.19956067539254824,
+      "mean_paired_improvement": 0.17895852594574294,
+      "relative_reduction_percent": 47.27858595099476,
+      "paired_improvement_ci95": [
+        0.16266454168806474,
+        0.19517033745820322
+      ],
+      "wilcoxon_one_sided_p": 3.982832768833693e-90,
+      "variants_improved": 777,
+      "holm_adjusted_p": 7.965665537667387e-90
+    },
+    "3": {
+      "baseline_mean_instability": 0.39062684363126754,
+      "averaged_mean_instability": 0.19956067539254824,
+      "mean_paired_improvement": 0.1910661682387193,
+      "relative_reduction_percent": 48.91270821599663,
+      "paired_improvement_ci95": [
+        0.1740294945572813,
+        0.20773088437020779
+      ],
+      "wilcoxon_one_sided_p": 2.937840513176305e-93,
+      "variants_improved": 777,
+      "holm_adjusted_p": 8.813521539528915e-93
+    },
+    "4": {
+      "baseline_mean_instability": 0.3767283553183079,
+      "averaged_mean_instability": 0.19956067539254824,
+      "mean_paired_improvement": 0.1771676799257596,
+      "relative_reduction_percent": 47.02796522339444,
+      "paired_improvement_ci95": [
+        0.16150136386627953,
+        0.19343671892657874
+      ],
+      "wilcoxon_one_sided_p": 6.634419843554499e-86,
+      "variants_improved": 765,
+      "holm_adjusted_p": 6.634419843554499e-86
+    },
+    "5": {
+      "baseline_mean_instability": 0.39216189140081403,
+      "averaged_mean_instability": 0.19956067539254824,
+      "mean_paired_improvement": 0.19260121600826582,
+      "relative_reduction_percent": 49.11268030666837,
+      "paired_improvement_ci95": [
+        0.17585201941281556,
+        0.20939151233111822
+      ],
+      "wilcoxon_one_sided_p": 1.6571153851710278e-93,
+      "variants_improved": 787,
+      "holm_adjusted_p": 6.628461540684111e-93
+    }
+  },
+  "clinical_subgroups": {
+    "Benign": {
+      "count": 500,
+      "raw_mean_instability": 0.42816215819120407,
+      "averaged_mean_instability": 0.19424947343269983,
+      "mean_paired_improvement": 0.23391268475850424,
+      "relative_reduction_percent": 54.63179785590627,
+      "sign_disagreements": 308
+    },
+    "Pathogenic": {
+      "count": 500,
+      "raw_mean_instability": 0.42944036293029786,
+      "averaged_mean_instability": 0.20487187735239665,
+      "mean_paired_improvement": 0.2245684855779012,
+      "relative_reduction_percent": 52.29328795401348,
+      "sign_disagreements": 299
+    }
+  },
+  "exploratory_clinical_auroc": {
+    "score_direction": "Negative ALT-vs-REF log likelihood",
+    "phase0": 0.5455000000000001,
+    "six_phase_mean": 0.558344,
+    "delta": 0.012843999999999856,
+    "delta_ci95": [
+      -0.011030799999999927,
+      0.03660059999999996
+    ]
+  },
+  "new_scoring_wall_seconds": 3.2999960239976645e-06,
+  "batch_size_variants": 2,
+  "dtype": "float32",
+  "input_sha256": "a422834a24d59f4ad713b473001d8686c43dbe21c42577028d27109b5f348b2c",
+  "original_cohort_sha256": "4cd97aab131212b5c43d9e389891f0a900d5d7af1adbc4a4d0863584fec669be",
+  "output_sha256": "8caa81ba84069da153e5c17fe8e1963a1f74001a964c1613ccf51dba2810eb88",
+  "script_sha256": "d631e687c1b7befa74f8cedcea566b6d7e6de2d8a059c27acb837183f5298b61",
+  "model_config_sha256": "e20f497248c7cb264c7cd4582dbcfd52dc4cbf74a97fc711559b8c8f71c635db",
+  "tokenizer_vocab_sha256": "c00e0ad166d6ab3f7540ebc92270392e581bb3106763412f29034b49323e1052",
+  "bootstrap_method": "2000 class-stratified paired variant-level resamples",
+  "multiple_testing": "Holm adjustment for six phase-baseline comparisons",
+  "limitations": [
+    "The held-out cohort comes from the same ClinVar release.",
+    "Position-disjoint variants can share genes and genomic regions.",
+    "Anchor shifts also change flanking sequence context and token position.",
+    "Variant-level bootstrap intervals do not account for gene clustering.",
+    "Six-phase averaging requires six model evaluations per anchor.",
+    "Clinical labels are not direct molecular effect measurements.",
+    "Clinical AUROC is exploratory and does not establish clinical utility."
+  ]
+}

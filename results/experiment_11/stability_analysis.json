@@ -1,0 +1,52 @@
+{
+  "experiment": "11_clinvar_stability",
+  "research_step": 14,
+  "seed": 20261025,
+  "variants": 1000,
+  "anchor_shifts_nt": [
+    -6,
+    0,
+    6
+  ],
+  "phases_per_anchor": 6,
+  "window_length_nt": 144,
+  "score": "log P(ALT token) - log P(REF token)",
+  "raw_baseline": "Phase 0 at each anchor",
+  "correction": "Mean of six phases at each anchor",
+  "raw_mean_absolute_anchor_change": 0.4368969758152962,
+  "average_mean_absolute_anchor_change": 0.20545533621311188,
+  "mean_paired_improvement": 0.2314416396021843,
+  "relative_reduction_percent": 52.97396237872547,
+  "paired_improvement_ci95": [
+    0.21323846208800873,
+    0.24951335560257235
+  ],
+  "wilcoxon_one_sided_p": 3.0885930725448767e-103,
+  "variants_with_positive_improvement": 799,
+  "subgroups": {
+    "Benign": {
+      "count": 500,
+      "raw_mean_absolute_change": 0.4293728368282318,
+      "averaged_mean_absolute_change": 0.20788873547315598,
+      "mean_improvement": 0.22148410135507582
+    },
+    "Pathogenic": {
+      "count": 500,
+      "raw_mean_absolute_change": 0.4444211148023605,
+      "averaged_mean_absolute_change": 0.20302193695306778,
+      "mean_improvement": 0.24139917784929274
+    }
+  },
+  "input_sha256": "d47b4a4b0177c38ae3cfab2f2e6e8c0c05dd519e922d6d6c2fbc68b4d7963db0",
+  "output_sha256": "921b7c18314236ed09e42045b767b3c438dab29edcf7219f937211e26f113d9c",
+  "script_sha256": "ab2e0f8fee0868fc693d714dca837d3325c5833ada12a30963d0595d28183419",
+  "model_config_sha256": "e20f497248c7cb264c7cd4582dbcfd52dc4cbf74a97fc711559b8c8f71c635db",
+  "limitations": [
+    "Anchor shifts change flanking sequence context and token positions, not only tokenization phase",
+    "Phase averaging requires six model evaluations per anchor instead of one",
+    "This analysis measures numerical stability, not pathogenicity prediction accuracy",
+    "Variants may be dependent because of shared genes or genomic loci",
+    "The bootstrap resamples variants independently",
+    "The center-anchor scores are reused from Experiment 09"
+  ]
+}

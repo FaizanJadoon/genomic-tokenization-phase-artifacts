@@ -1,0 +1,76 @@
+{
+  "experiment": "10_clinvar_evaluation",
+  "research_step": 13,
+  "seed": 20261025,
+  "bootstrap_replicates": 2000,
+  "bootstrap_method": "Paired variant-level stratified bootstrap with replacement within each clinical class",
+  "label_column": "clinical_label",
+  "positive_class": "Pathogenic",
+  "negative_class": "Benign",
+  "sample_size": 1000,
+  "benign_count": 500,
+  "pathogenic_count": 500,
+  "score_orientation": "Negative of log P(ALT) minus log P(REF); fixed before evaluation",
+  "raw": {
+    "auroc": 0.536852,
+    "auroc_ci95": [
+      0.5012381,
+      0.5701948
+    ],
+    "average_precision": 0.5572499461000544,
+    "average_precision_ci95": [
+      0.5240893619609045,
+      0.5921523054922628
+    ]
+  },
+  "phase_average": {
+    "auroc": 0.553332,
+    "auroc_ci95": [
+      0.5178479000000001,
+      0.5877783999999999
+    ],
+    "average_precision": 0.5571966102678622,
+    "average_precision_ci95": [
+      0.5257946826418383,
+      0.5932595577395182
+    ]
+  },
+  "paired_difference_average_minus_raw": {
+    "auroc": 0.01648000000000005,
+    "auroc_ci95": [
+      -0.007274699999999947,
+      0.04135620000000003
+    ],
+    "average_precision": -5.3335832192247246e-05,
+    "average_precision_ci95": [
+      -0.025264159218307585,
+      0.027404234042146605
+    ]
+  },
+  "individual_phase_aurocs": {
+    "phase_0": 0.536852,
+    "phase_1": 0.558872,
+    "phase_2": 0.547568,
+    "phase_3": 0.559952,
+    "phase_4": 0.540376,
+    "phase_5": 0.531684
+  },
+  "phase_sign_disagreements": 619,
+  "phase_sign_disagreement_fraction": 0.619,
+  "mean_phase_range": 2.868879892349243,
+  "input_sha256": "d47b4a4b0177c38ae3cfab2f2e6e8c0c05dd519e922d6d6c2fbc68b4d7963db0",
+  "script_sha256": "3730d3ded4e47ab87ea998a6020091cd5646eaa0a4dd508813a749c3536539b1",
+  "python_version": "3.12.4",
+  "numpy_version": "2.5.4",
+  "scipy_version": "1.18.1",
+  "sklearn_version": "1.9.1",
+  "limitations": [
+    "ClinVar pathogenicity labels are not direct molecular-effect measurements",
+    "The benchmark is artificially balanced and is not representative of clinical prevalence",
+    "No model training or label-based score orientation selection was performed",
+    "Bootstrap assumes variant-level independence; shared genes or loci may create dependence",
+    "AUROC and AP do not establish clinical utility",
+    "The pretrained model is not a validated clinical pathogenicity classifier",
+    "Six-phase averaging also changes sequence window context and token positions"
+  ]
+}

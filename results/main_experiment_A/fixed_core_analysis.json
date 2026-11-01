@@ -1,0 +1,69 @@
+{
+  "experiment": "main_A_fixed_core_phase_flank_controls",
+  "research_step": 17,
+  "model": "InstaDeepAI/nucleotide-transformer-v2-50m-multi-species",
+  "expected_model_revision_not_verified": "81b29e5786726d891dbf929404ef20adca5b36f1",
+  "precision": "float32",
+  "scoring_method": "Masked log P(ALT 6-mer) minus log P(REF 6-mer)",
+  "seed": 20261025,
+  "variants": 1000,
+  "total_scores": 12000,
+  "core_start_zero_based": 48,
+  "core_length_nt": 144,
+  "input_length_nt": 150,
+  "flank_conditions": [
+    "Real genomic flanks",
+    "Each 6nt genomic flank rotated by 3nt"
+  ],
+  "mean_phase_effect": 1.2700412628034752,
+  "mean_flank_effect": 0.3574320958157381,
+  "mean_phase_minus_flank_effect": 0.912609166987737,
+  "phase_minus_flank_ci95": [
+    0.8834134280137221,
+    0.9427273145043849
+  ],
+  "variants_phase_effect_greater": 999,
+  "mean_raw_flank_change": 0.262612268447876,
+  "mean_averaged_flank_change": 0.1777453640798728,
+  "mean_stability_improvement": 0.08486690436800322,
+  "stability_improvement_ci95": [
+    0.06848016550218065,
+    0.10109602130427957
+  ],
+  "exploratory_clinical_auroc": {
+    "genomic": {
+      "phase0": 0.542448,
+      "six_phase_mean": 0.551636,
+      "delta": 0.009187999999999974
+    },
+    "rotated": {
+      "phase0": 0.542896,
+      "six_phase_mean": 0.5532440000000001,
+      "delta": 0.010348000000000024
+    }
+  },
+  "exploratory_auroc_delta_ci95": {
+    "genomic": [
+      -0.014956299999999964,
+      0.03326009999999996
+    ],
+    "rotated": [
+      -0.012727400000000066,
+      0.03406430000000009
+    ]
+  },
+  "input_sha256": "01c1224263d0aa3573597347c095afd36344bb76dc7b674519f17beafeeafaeb",
+  "output_sha256": "5f82fc41fbfb56a7bdd307d4261d613c775d58c742d0481f18fc0df47f7180a2",
+  "script_sha256": "0ca7cb660bc064491200d35a883a52eead373375fd4982d3a9a7564bf38879f2",
+  "model_config_sha256": "e20f497248c7cb264c7cd4582dbcfd52dc4cbf74a97fc711559b8c8f71c635db",
+  "tokenizer_vocab_sha256": "c00e0ad166d6ab3f7540ebc92270392e581bb3106763412f29034b49323e1052",
+  "limitations": [
+    "Phase comparisons retain the same 144nt core but alter distal flank allocation.",
+    "Rotated flanks are artificial sequence-context perturbations.",
+    "The design does not uniquely establish a causal tokenization-phase effect.",
+    "ClinVar labels are not direct molecular functional measurements.",
+    "This is not independent clinical validation.",
+    "Variants may be correlated through shared genes or loci.",
+    "Results from 150nt inputs must not be directly compared with previous 144nt score magnitudes."
+  ]
+}

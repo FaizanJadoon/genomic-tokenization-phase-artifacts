@@ -1,0 +1,78 @@
+
+# Python virtual environments
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.ipynb_checkpoints/
+
+# IDE and operating system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Downloaded datasets
+/data/*
+!/data/README.md
+
+# Downloaded model weights
+/models/*
+!/models/README.md
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+
+# Logs and temporary files
+/logs/
+*.log
+*.tmp
+*.bak
+.cache/
+
+# Private manuscript drafts
+/manuscript/
+
+# Archives
+*.zip
+*.rar
+*.7z
+*.tar
+*.tar.gz
+
+# Large biological data
+*.fastq
+*.fastq.gz
+*.bam
+*.bai
+*.vcf
+*.vcf.gz
+*.fasta.gz
+
+# Large numerical outputs
+*.npy
+*.npz
+*.parquet
+*.h5
+*.hdf5
+
+# Credentials and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local Hugging Face metadata
+**/.cache/
+
+# Generated local report archives
+/results/publication_report/
+
+# Local research archive
+Paper2_Reproducibility_Package.zip

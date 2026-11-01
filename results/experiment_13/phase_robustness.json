@@ -1,0 +1,154 @@
+{
+  "experiment": "13_phase_robustness",
+  "research_step": 16,
+  "seed": 20261025,
+  "variants": 1000,
+  "anchor_shifts_nt": [
+    -6,
+    0,
+    6
+  ],
+  "phases": 6,
+  "bootstrap_replicates": 2000,
+  "bootstrap_method": "Paired, class-stratified variant-level bootstrap",
+  "multiple_testing_correction": "Holm",
+  "averaged_mean_absolute_change": 0.20545533621311188,
+  "individual_phase_mean_changes": [
+    0.4368969758152962,
+    0.39695447021722796,
+    0.40271542239189145,
+    0.38913517439365386,
+    0.40147529339790344,
+    0.39543031370639803
+  ],
+  "all_phase_means_greater_than_average": true,
+  "all_improvement_ci95_lower_above_zero": true,
+  "all_holm_adjusted_p_below_0_05": true,
+  "phase_comparisons": [
+    {
+      "phase": 0,
+      "individual_mean_absolute_change": 0.4368969758152962,
+      "averaged_mean_absolute_change": 0.20545533621311188,
+      "mean_paired_improvement": 0.23144163960218436,
+      "relative_reduction_percent": 52.97396237872548,
+      "variants_improved": 799,
+      "improvement_ci95_lower": 0.21270983272890254,
+      "improvement_ci95_upper": 0.25115510555108383,
+      "wilcoxon_p": 3.0885930725448767e-103,
+      "holm_adjusted_p": 1.853155843526926e-102
+    },
+    {
+      "phase": 1,
+      "individual_mean_absolute_change": 0.39695447021722796,
+      "averaged_mean_absolute_change": 0.20545533621311188,
+      "mean_paired_improvement": 0.191499134004116,
+      "relative_reduction_percent": 48.24209030807001,
+      "variants_improved": 784,
+      "improvement_ci95_lower": 0.1737464080246785,
+      "improvement_ci95_upper": 0.2092227402172984,
+      "wilcoxon_p": 3.727851093125309e-90,
+      "holm_adjusted_p": 7.455702186250618e-90
+    },
+    {
+      "phase": 2,
+      "individual_mean_absolute_change": 0.40271542239189145,
+      "averaged_mean_absolute_change": 0.20545533621311188,
+      "mean_paired_improvement": 0.1972600861787795,
+      "relative_reduction_percent": 48.98250109399119,
+      "variants_improved": 789,
+      "improvement_ci95_lower": 0.18084420701911047,
+      "improvement_ci95_upper": 0.21443583291123333,
+      "wilcoxon_p": 1.2583227634772526e-96,
+      "holm_adjusted_p": 6.291613817386263e-96
+    },
+    {
+      "phase": 3,
+      "individual_mean_absolute_change": 0.38913517439365386,
+      "averaged_mean_absolute_change": 0.20545533621311188,
+      "mean_paired_improvement": 0.18367983818054193,
+      "relative_reduction_percent": 47.20206505791974,
+      "variants_improved": 774,
+      "improvement_ci95_lower": 0.16736073685760297,
+      "improvement_ci95_upper": 0.19942055006076878,
+      "wilcoxon_p": 3.8544301770189573e-91,
+      "holm_adjusted_p": 1.1563290531056872e-90
+    },
+    {
+      "phase": 4,
+      "individual_mean_absolute_change": 0.40147529339790344,
+      "averaged_mean_absolute_change": 0.20545533621311188,
+      "mean_paired_improvement": 0.19601995718479143,
+      "relative_reduction_percent": 48.82491162177579,
+      "variants_improved": 787,
+      "improvement_ci95_lower": 0.17900665306448954,
+      "improvement_ci95_upper": 0.21369224803671252,
+      "wilcoxon_p": 1.2741943195524766e-92,
+      "holm_adjusted_p": 5.0967772782099064e-92
+    },
+    {
+      "phase": 5,
+      "individual_mean_absolute_change": 0.39543031370639803,
+      "averaged_mean_absolute_change": 0.20545533621311188,
+      "mean_paired_improvement": 0.18997497749328604,
+      "relative_reduction_percent": 48.04259332387452,
+      "variants_improved": 768,
+      "improvement_ci95_lower": 0.17314875984415398,
+      "improvement_ci95_upper": 0.20744981127306825,
+      "wilcoxon_p": 2.714861446687681e-85,
+      "holm_adjusted_p": 2.714861446687681e-85
+    }
+  ],
+  "clinical_subgroups": {
+    "benign": {
+      "variants": 500,
+      "individual_phase_changes": [
+        0.4293728368282318,
+        0.3897639056444168,
+        0.4127445492744446,
+        0.39247875833511353,
+        0.3858320894241333,
+        0.38389552760124207
+      ],
+      "averaged_change": 0.20788873547315598,
+      "improvement_against_each_phase": [
+        0.22148410135507582,
+        0.18187517017126084,
+        0.20485581380128862,
+        0.18459002286195755,
+        0.1779433539509773,
+        0.1760067921280861
+      ]
+    },
+    "pathogenic": {
+      "variants": 500,
+      "individual_phase_changes": [
+        0.4444211148023605,
+        0.40414503479003905,
+        0.39268629550933837,
+        0.3857915904521942,
+        0.41711849737167356,
+        0.40696509981155393
+      ],
+      "averaged_change": 0.20302193695306778,
+      "improvement_against_each_phase": [
+        0.24139917784929274,
+        0.20112309783697127,
+        0.1896643585562706,
+        0.1827696534991264,
+        0.21409656041860578,
+        0.20394316285848615
+      ]
+    }
+  },
+  "input_sha256": "921b7c18314236ed09e42045b767b3c438dab29edcf7219f937211e26f113d9c",
+  "output_sha256": "ba59177494cae14bf89a6ea7a8aec3917265605fd95144a48bbf2b38cbff6fe7",
+  "script_sha256": "52dfadf9fa11931f767ee60f22278019fedbd686729356945df5e81fcfcdb169",
+  "limitations": [
+    "Averaging is a smoothing operation; reduced numerical variability alone does not establish biological validity",
+    "Six-phase averaging requires six model evaluations per anchor",
+    "Comparisons use the same variants and scores as previous experiments",
+    "Window shifts also change sequence context",
+    "Shared genes or loci can create dependence between variants",
+    "These are exploratory follow-up comparisons"
+  ]
+}
